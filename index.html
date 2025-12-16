@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NetflixClone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: "#141414",
+              netflix: "#e50914",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+
+  <body class="bg-dark text-white">
+    <!-- NAVBAR -->
+    <header class="fixed top-0 w-full z-50 bg-dark/90 backdrop-blur">
+      <nav class="flex items-center justify-between px-8 py-4">
+        <h1 class="text-netflix text-2xl font-bold">Netflix</h1>
+
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Rechercher un film..."
+          class="bg-zinc-800 px-4 py-2 rounded text-sm outline-none focus:ring-2 focus:ring-netflix"
+        />
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="pt-28 px-8">
+      <h2 class="text-xl font-semibold mb-4">Films</h2>
+
+      <div id="movies" class="flex gap-4 overflow-x-auto"></div>
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
