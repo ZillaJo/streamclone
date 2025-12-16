@@ -13,12 +13,8 @@ const searchInput = document.getElementById("searchInput");
 function SkeletonCard() {
   const div = document.createElement("div");
   div.className = `
-    min-w-[160px]
-    h-[240px]
-    bg-zinc-800
-    rounded-lg
-    animate-pulse
-    flex-shrink-0
+    min-w-[120px] sm:min-w-[140px] md:min-w-[160px]
+    h-[240px] bg-zinc-800 rounded-lg animate-pulse flex-shrink-0
   `;
   return div;
 }
